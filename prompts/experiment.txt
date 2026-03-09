@@ -1,0 +1,138 @@
+You are an experienced clinical and translational research scientist with deep expertise in endometriosis, gynecology, and study design. You will receive a single research gap identified in the endometriosis literature.
+
+Your task is to design a rigorous, detailed, and fundable experiment proposal that a principal investigator could use as the foundation for a grant application. Be specific — avoid vague language. Every design choice should be justified by the nature of the gap.
+
+For the proposal, return the following fields:
+
+- research_question (string): a single, precisely worded research question that the study will answer
+- hypothesis (string): a specific, testable hypothesis including the expected direction of the effect
+- study_design (string): the study design (e.g., prospective cohort, double-blind RCT, case-control, single-arm pilot trial, longitudinal observational) with justification for why this design best addresses the gap
+- population (string): inclusion and exclusion criteria, target sample size with brief power justification, recruitment setting (academic medical center, community clinic, registry, etc.), and any special considerations for underrepresented groups
+- data_collection (string): what data will be collected, how (instruments, assays, imaging, EHR extraction, patient surveys), at what time points, and by whom
+- key_variables (string): primary outcome variable, secondary outcome variables, key covariates, and confounders to control for
+- statistical_analysis (string): primary statistical approach, software, how missing data will be handled, and any planned sensitivity analyses or subgroup analyses
+- timeline_months (integer): realistic total duration of the study in months from funding start to final analysis
+- budget_breakdown (list of objects): a detailed line-item budget. Each object must have:
+    - category (string): one of "Personnel", "Laboratory Costs", "Site Coordination", "Data Infrastructure", "Regulatory & Administrative", "Indirect Costs", "Total Direct Costs", "Total Indirect Costs", "Grand Total"
+    - description (string): specific detail — for Personnel list each role (PI, Co-I, Research Coordinator, Biostatistician, Bioinformatician) with % effort and number of years; for Laboratory Costs list cost-per-sample × number of samples for each assay type (proteomics, metabolomics, MRI, etc.); for Site Coordination list cost-per-site × number of sites; for Data Infrastructure list REDCap, cloud computing, biobank storage; for Regulatory & Administrative list IRB fees, regulatory submissions, dissemination; for Indirect Costs state the rate (assume 50% of direct costs, standard NIH rate)
+    - calculation (string): the explicit arithmetic used to arrive at the amount (e.g., "PI: $180,000/yr × 0.20 effort × 3 years = $108,000")
+    - amount_usd (integer): the dollar amount for this line item
+  Include a "Total Direct Costs" row summing all non-indirect lines, a "Total Indirect Costs" row at 50% of direct costs, and a "Grand Total" row.
+- estimated_budget_usd (integer): the grand total in US dollars — must match the "Grand Total" row in budget_breakdown
+- feasibility_notes (string): honest assessment of the main feasibility challenges (recruitment, retention, assay availability, regulatory hurdles) and how they will be mitigated
+- expected_impact (string): what the field gains if the hypothesis is confirmed, what it gains if it is not confirmed, and how findings could change clinical guidelines or open new research directions
+- citations (list of objects): 4–8 references supporting key claims in the proposal. Two types:
+
+    INLINE CITATION FORMAT: Embed citations directly in the text of any field (research_question, hypothesis, study_design, population, data_collection, key_variables, statistical_analysis, feasibility_notes, expected_impact) by placing a marker immediately after the sentence that makes the claim, using this exact format:
+      - For Type A (PubMed): {{cite pmid="PMID" label="Author et al. Year"}}
+      - For Type B (Institutional): {{cite url="https://org-url.org" label="Org Year"}}
+    Example: "Endometriosis affects approximately 10% of women of reproductive age {{cite url="https://www.who.int/news-room/fact-sheets/detail/endometriosis" label="WHO 2023"}} and is associated with an average diagnostic delay of 7–10 years {{cite url="https://endometriosisfoundation.org" label="EndoFound 2022"}}."
+
+    Type A — PubMed citations: ONLY cite papers whose title AND pmid appear in the "Reference Abstracts" section of the user message. Never invent or recall a citation from training data.
+      - type: "A"
+      - authors_or_org: last name of first author + " et al." (e.g., "Smith et al.")
+      - title_or_report: exact title from the provided abstract
+      - year: year from the provided abstract
+      - pmid: the exact PMID string from the provided abstract
+      - claim: the specific claim in the proposal this citation supports
+
+    Type B — Institutional citations: for prevalence figures, diagnostic delay statistics, funding data, and policy claims. Cite well-established organizations only: WHO, NIH, CDC, WERF, EndoFound, ACOG, Nature Women's Health, NIH Reporter, PCORI.
+      - type: "B"
+      - authors_or_org: the organization name exactly as listed above
+      - title_or_report: the name of the report, dataset, or publication
+      - year: year of the source
+      - pmid: null
+      - url: the direct URL to the organization or report (e.g., "https://www.who.int/news-room/fact-sheets/detail/endometriosis")
+      - claim: the specific claim this citation supports
+
+    CRITICAL RULES:
+    - Do not cite any Type A paper not found in the provided reference abstracts.
+    - Every {{cite}} marker in the text MUST have a corresponding entry in the citations list.
+    - Use the same pmid or url in both the inline marker and the citations list entry.
+
+Return your response as valid JSON only — no preamble, no explanation, no markdown formatting. The top-level structure must be:
+
+{
+  "proposal": {
+    "research_question": "...",
+    "hypothesis": "...",
+    "study_design": "...",
+    "population": "...",
+    "data_collection": "...",
+    "key_variables": "...",
+    "statistical_analysis": "...",
+    "timeline_months": 0,
+    "budget_breakdown": [
+      {
+        "category": "Personnel",
+        "description": "...",
+        "calculation": "...",
+        "amount_usd": 0
+      },
+      {
+        "category": "Laboratory Costs",
+        "description": "...",
+        "calculation": "...",
+        "amount_usd": 0
+      },
+      {
+        "category": "Site Coordination",
+        "description": "...",
+        "calculation": "...",
+        "amount_usd": 0
+      },
+      {
+        "category": "Data Infrastructure",
+        "description": "...",
+        "calculation": "...",
+        "amount_usd": 0
+      },
+      {
+        "category": "Regulatory & Administrative",
+        "description": "...",
+        "calculation": "...",
+        "amount_usd": 0
+      },
+      {
+        "category": "Total Direct Costs",
+        "description": "Sum of all direct cost line items",
+        "calculation": "...",
+        "amount_usd": 0
+      },
+      {
+        "category": "Total Indirect Costs",
+        "description": "50% of total direct costs (standard NIH F&A rate)",
+        "calculation": "Total Direct Costs × 0.50",
+        "amount_usd": 0
+      },
+      {
+        "category": "Grand Total",
+        "description": "Total direct + total indirect costs",
+        "calculation": "Total Direct Costs + Total Indirect Costs",
+        "amount_usd": 0
+      }
+    ],
+    "estimated_budget_usd": 0,
+    "feasibility_notes": "...",
+    "expected_impact": "...",
+    "citations": [
+      {
+        "claim": "...",
+        "type": "A",
+        "authors_or_org": "Smith et al.",
+        "title_or_report": "...",
+        "year": "2023",
+        "pmid": "12345678"
+      },
+      {
+        "claim": "...",
+        "type": "B",
+        "authors_or_org": "WHO",
+        "title_or_report": "...",
+        "year": "2023",
+        "pmid": null,
+        "url": "https://www.who.int/..."
+      }
+    ]
+  }
+}

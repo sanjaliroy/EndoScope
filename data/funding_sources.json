@@ -1,0 +1,294 @@
+{
+  "funding_sources": [
+    {
+      "name": "NIH NICHD Endometriosis Research Program",
+      "type": "Federal",
+      "mechanism": "R01",
+      "amount": "$250,000 - $500,000 per year (direct costs)",
+      "career_stage": ["Early Stage Investigator", "Mid-Career", "Senior Investigator"],
+      "priorities": [
+        "disease mechanisms and pathophysiology",
+        "pain pathways and management",
+        "fertility and reproductive outcomes",
+        "biomarker discovery",
+        "non-invasive diagnostics",
+        "hormonal and surgical treatments",
+        "disease progression and staging"
+      ],
+      "requires_preliminary_data": true,
+      "typical_deadline": "February 5, June 5, October 5 (standard R01 cycles)",
+      "url": "https://www.nichd.nih.gov",
+      "description": "The NIH Eunice Kennedy Shriver National Institute of Child Health and Human Development (NICHD) supports endometriosis research focused on understanding the biological mechanisms of disease, improving diagnosis, and developing novel treatments. Funds basic, translational, and clinical studies through the standard R01 mechanism."
+    },
+    {
+      "name": "DOD CDMRP Endometriosis Research Program",
+      "type": "Federal - Department of Defense",
+      "mechanism": "Investigator-Initiated Research Award / Clinical Trial Award",
+      "amount": "$300,000 - $1,500,000 total costs",
+      "career_stage": ["Early Stage Investigator", "Mid-Career", "Senior Investigator"],
+      "priorities": [
+        "non-invasive diagnosis",
+        "pain mechanisms and treatment",
+        "impact on military readiness and quality of life",
+        "disease etiology",
+        "novel therapeutic targets",
+        "patient-centered outcomes",
+        "health disparities in endometriosis"
+      ],
+      "requires_preliminary_data": true,
+      "typical_deadline": "Annually, typically September - November (check CDMRP Program Announcements)",
+      "url": "https://cdmrp.health.mil",
+      "description": "The Congressionally Directed Medical Research Programs (CDMRP) Endometriosis Research Program (ERP) funds research to understand, diagnose, and treat endometriosis. Particularly focused on impacts on active-duty service members and veterans. Offers multiple award mechanisms including Idea Awards and Clinical Trials."
+    },
+    {
+      "name": "NIH ORWH Building Interdisciplinary Research Careers in Women's Health (BIRCWH)",
+      "type": "Federal",
+      "mechanism": "K12 (Institutional Career Development)",
+      "amount": "$150,000 - $200,000 per year per scholar",
+      "career_stage": ["Early Stage Investigator", "Postdoctoral Fellow"],
+      "priorities": [
+        "sex and gender influences on health",
+        "women's health research",
+        "interdisciplinary approaches to endometriosis",
+        "reproductive health",
+        "pain and chronic disease in women",
+        "career development in women's health research"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "Varies by institution; institutional application typically in spring",
+      "url": "https://orwh.od.nih.gov",
+      "description": "The NIH Office of Research on Women's Health (ORWH) BIRCWH program provides career development support for early-stage investigators pursuing research in women's health, including endometriosis. Scholars receive mentorship, protected research time, and funding through their host institutions."
+    },
+    {
+      "name": "NIH R21 Exploratory/Developmental Research Grant",
+      "type": "Federal",
+      "mechanism": "R21",
+      "amount": "Up to $275,000 total direct costs over 2 years",
+      "career_stage": ["Early Stage Investigator", "Mid-Career", "Senior Investigator"],
+      "priorities": [
+        "novel hypotheses and innovative approaches",
+        "preliminary data generation",
+        "new biological insights into endometriosis",
+        "technology development for diagnosis",
+        "pilot clinical studies",
+        "exploratory basic research"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "February 16, June 16, October 16 (standard R21 cycles)",
+      "url": "https://grants.nih.gov",
+      "description": "The NIH R21 mechanism supports exploratory and developmental research projects that lack sufficient preliminary data for a full R01. Ideal for testing novel concepts or developing new tools and methodologies relevant to endometriosis research. Two-year duration with no renewal."
+    },
+    {
+      "name": "NIH R03 Small Grant Program",
+      "type": "Federal",
+      "mechanism": "R03",
+      "amount": "Up to $50,000 per year for up to 2 years",
+      "career_stage": ["Early Stage Investigator", "Postdoctoral Fellow"],
+      "priorities": [
+        "pilot and feasibility studies",
+        "secondary data analysis",
+        "small clinical studies",
+        "development of new research methodologies",
+        "preliminary investigation of endometriosis mechanisms"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "February 16, June 16, October 16 (standard R03 cycles)",
+      "url": "https://grants.nih.gov",
+      "description": "The NIH R03 Small Grant Program provides limited funding for new investigators to conduct small, self-contained research projects including pilot studies, feasibility studies, and secondary data analyses related to endometriosis. Suitable for researchers building toward larger grants."
+    },
+    {
+      "name": "NIH HEAL Initiative – Endometriosis and Pelvic Pain",
+      "type": "Federal",
+      "mechanism": "Multiple (R01, R61/R33, UG3/UH3)",
+      "amount": "$500,000 - $2,000,000 total costs (mechanism-dependent)",
+      "career_stage": ["Mid-Career", "Senior Investigator"],
+      "priorities": [
+        "chronic pelvic pain mechanisms",
+        "non-opioid pain management",
+        "central sensitization in endometriosis",
+        "multi-disciplinary pain treatment",
+        "opioid use and misuse in endometriosis patients",
+        "pain biomarkers",
+        "patient-reported outcomes"
+      ],
+      "requires_preliminary_data": true,
+      "typical_deadline": "Varies by specific HEAL FOA; check NIH HEAL Initiative website",
+      "url": "https://heal.nih.gov",
+      "description": "The NIH Helping to End Addiction Long-term (HEAL) Initiative includes funding for endometriosis-related chronic pelvic pain research, particularly focused on understanding pain mechanisms and developing non-opioid treatment alternatives. Supports both basic and translational research."
+    },
+    {
+      "name": "Endometriosis Foundation of America Research Grant",
+      "type": "Private Foundation",
+      "mechanism": "Research Grant",
+      "amount": "$50,000 - $150,000",
+      "career_stage": ["Early Stage Investigator", "Mid-Career"],
+      "priorities": [
+        "early detection and biomarkers",
+        "disease mechanisms",
+        "innovative treatment approaches",
+        "adolescent endometriosis",
+        "reducing diagnostic delay",
+        "patient quality of life",
+        "surgical techniques"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "Typically spring (March - May); check website annually",
+      "url": "https://www.endofound.org",
+      "description": "The Endometriosis Foundation of America (EndoFound) funds research aimed at advancing the understanding and treatment of endometriosis, with a particular emphasis on early detection, reducing diagnostic delay, and improving quality of life. Encourages applications from early-career investigators."
+    },
+    {
+      "name": "World Endometriosis Research Foundation (WERF) Grant",
+      "type": "International Foundation",
+      "mechanism": "Research Grant / Collaborative Network Grant",
+      "amount": "$25,000 - $100,000",
+      "career_stage": ["Early Stage Investigator", "Mid-Career", "Senior Investigator"],
+      "priorities": [
+        "global epidemiology of endometriosis",
+        "genetics and genomics",
+        "international collaborative studies",
+        "patient registries and biobanks",
+        "translational research",
+        "health economics and burden of disease",
+        "phenotyping and classification"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "Rolling or annual; check WERF website for current opportunities",
+      "url": "https://werf.co",
+      "description": "The World Endometriosis Research Foundation (WERF) supports international collaborative research to better understand endometriosis globally. Known for supporting the WERF EPHect (Endometriosis Phenome and Biobanking Harmonisation Project) and multi-site epidemiological studies."
+    },
+    {
+      "name": "PCORI Patient-Centered Outcomes Research Award",
+      "type": "Independent Nonprofit (Congressional Mandate)",
+      "mechanism": "Research Award (large) / Pilot Projects (small)",
+      "amount": "$1,000,000 - $10,000,000 (large); up to $500,000 (pilot)",
+      "career_stage": ["Mid-Career", "Senior Investigator"],
+      "priorities": [
+        "patient-centered outcomes in endometriosis treatment",
+        "comparative effectiveness of treatments",
+        "patient engagement in research design",
+        "health disparities in diagnosis and treatment",
+        "shared decision-making",
+        "quality of life and functional outcomes",
+        "pragmatic clinical trials"
+      ],
+      "requires_preliminary_data": true,
+      "typical_deadline": "Varies by cycle; quarterly Letters of Intent deadlines",
+      "url": "https://www.pcori.org",
+      "description": "The Patient-Centered Outcomes Research Institute (PCORI) funds comparative effectiveness research that prioritizes patient-centered outcomes. Endometriosis research must involve patients as partners and focus on outcomes that matter to patients, such as pain management, fertility, and quality of life."
+    },
+    {
+      "name": "Burroughs Wellcome Fund Career Award for Medical Scientists (CAMS)",
+      "type": "Private Foundation",
+      "mechanism": "Career Award",
+      "amount": "$700,000 over 5 years",
+      "career_stage": ["Early Stage Investigator", "Postdoctoral Fellow"],
+      "priorities": [
+        "bridging basic and clinical research",
+        "translational medicine",
+        "novel disease mechanisms",
+        "biomedical research with clinical application",
+        "physician-scientists pursuing lab-based research"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "Typically October - November annually",
+      "url": "https://www.bwfund.org",
+      "description": "The Burroughs Wellcome Fund CAMS supports physician-scientists transitioning from postdoctoral training to independent research faculty positions. Relevant for MDs and MD-PhDs studying endometriosis mechanisms with a translational or clinical focus. Highly competitive and prestigious award."
+    },
+    {
+      "name": "Society for Women's Health Research (SWHR) Interdisciplinary Network Grant",
+      "type": "Nonprofit Organization",
+      "mechanism": "Network / Pilot Grant",
+      "amount": "$25,000 - $75,000",
+      "career_stage": ["Early Stage Investigator", "Mid-Career"],
+      "priorities": [
+        "sex differences in disease",
+        "women's health across the lifespan",
+        "interdisciplinary research teams",
+        "endometriosis and comorbidities",
+        "translating research to policy",
+        "underrepresented populations in women's health"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "Varies; check SWHR website for current funding opportunities",
+      "url": "https://swhr.org",
+      "description": "The Society for Women's Health Research (SWHR) supports interdisciplinary research on conditions affecting women, including endometriosis. Their network grants encourage collaboration across disciplines and focus on translating findings into clinical practice and health policy."
+    },
+    {
+      "name": "American College of Obstetricians and Gynecologists (ACOG) Research Award",
+      "type": "Professional Society",
+      "mechanism": "Research Award / Fellowship Grant",
+      "amount": "$10,000 - $50,000",
+      "career_stage": ["Early Stage Investigator", "Resident", "Fellow"],
+      "priorities": [
+        "clinical research in obstetrics and gynecology",
+        "endometriosis diagnosis and surgical management",
+        "minimally invasive gynecologic surgery",
+        "reproductive outcomes",
+        "patient safety and quality improvement",
+        "health equity in gynecologic care"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "Typically January - March annually",
+      "url": "https://www.acog.org",
+      "description": "ACOG offers research awards and fellowships to support OB/GYN clinician-researchers including those focused on endometriosis. Particularly valuable for residents and fellows seeking to build a research portfolio in gynecologic surgery, reproductive medicine, and endometriosis management."
+    },
+    {
+      "name": "NIH K08 Mentored Clinical Scientist Research Career Development Award",
+      "type": "Federal",
+      "mechanism": "K08",
+      "amount": "Up to $150,000 per year in salary and research support for up to 5 years",
+      "career_stage": ["Early Stage Investigator", "Postdoctoral Fellow"],
+      "priorities": [
+        "developing independent clinical research skills",
+        "endometriosis translational research",
+        "mentored research experience",
+        "clinical trial design",
+        "biomarker validation",
+        "surgical outcomes research"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "February 12, June 12, October 12 (standard K award cycles)",
+      "url": "https://grants.nih.gov",
+      "description": "The NIH K08 award supports early-career physician-scientists with protected time and mentored research experience. Ideal for clinicians (MDs, DOs) pursuing endometriosis research who need dedicated time to develop their independent research program under the guidance of senior mentors."
+    },
+    {
+      "name": "American Society for Reproductive Medicine (ASRM) Research Grant",
+      "type": "Professional Society",
+      "mechanism": "Research Grant",
+      "amount": "$10,000 - $30,000",
+      "career_stage": ["Early Stage Investigator", "Mid-Career"],
+      "priorities": [
+        "endometriosis and infertility",
+        "assisted reproductive technology outcomes in endometriosis",
+        "endometriosis-associated ovarian disease",
+        "embryo implantation",
+        "reproductive immunology",
+        "ovarian reserve and endometriosis"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "Typically fall (September - October) annually",
+      "url": "https://www.asrm.org",
+      "description": "ASRM provides competitive research grants to support reproductive medicine research, including studies on endometriosis and infertility. Grants are available for ASRM members and focus on advancing the understanding of reproductive pathology and treatment options for patients with endometriosis."
+    },
+    {
+      "name": "European Society of Human Reproduction and Embryology (ESHRE) Research Grant",
+      "type": "International Professional Society",
+      "mechanism": "Research Grant",
+      "amount": "EUR 10,000 - EUR 50,000 (approximately $11,000 - $55,000 USD)",
+      "career_stage": ["Early Stage Investigator", "Mid-Career"],
+      "priorities": [
+        "endometriosis pathophysiology",
+        "European multi-center studies",
+        "guideline-driven clinical research",
+        "reproductive outcomes",
+        "endometriosis subtypes and classification",
+        "patient-reported outcomes in Europe",
+        "translational endometriosis research"
+      ],
+      "requires_preliminary_data": false,
+      "typical_deadline": "Typically January - March annually; check ESHRE website",
+      "url": "https://www.eshre.eu",
+      "description": "ESHRE supports research on human reproduction and embryology, including endometriosis. The society funds studies aligned with their clinical practice guidelines and encourages multi-center European collaborations. ESHRE also supports a dedicated Special Interest Group (SIG) on Endometriosis and Endometrium."
+    }
+  ]
+}

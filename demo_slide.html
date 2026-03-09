@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EndoScope — Demo Slide</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%; height: 100%;
+      background: #0a0a0f;
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #e8e8f0;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100vw; height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: 52px 64px 32px;
+      gap: 0;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .title {
+      font-size: 3.6rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 50%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin-top: 10px;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: #9ca3c8;
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      width: 64px; height: 3px;
+      background: linear-gradient(90deg, #7c3aed, #c084fc);
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    /* ── Columns ── */
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.035);
+      border: 1px solid rgba(124, 58, 237, 0.25);
+      border-radius: 16px;
+      padding: 32px 36px;
+      height: 100%;
+    }
+
+    .card-title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #7c3aed;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-title::before {
+      content: '';
+      display: inline-block;
+      width: 18px; height: 2px;
+      background: #7c3aed;
+      border-radius: 1px;
+      flex-shrink: 0;
+    }
+
+    .items { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+
+    .items li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.975rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #d1d5f0;
+    }
+
+    .bullet {
+      flex-shrink: 0;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #7c3aed;
+      margin-top: 8px;
+      box-shadow: 0 0 6px rgba(124,58,237,0.7);
+    }
+
+    .bullet-check {
+      flex-shrink: 0;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: rgba(124,58,237,0.15);
+      border: 1px solid rgba(124,58,237,0.5);
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+      font-size: 0.6rem;
+      color: #a78bfa;
+    }
+
+    .stat { color: #f0ebff; font-weight: 600; }
+
+    /* ── Bar Chart ── */
+    .chart-block {
+      margin: 4px 0 0 18px;
+    }
+
+    .chart-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #7c3aed;
+      margin-bottom: 10px;
+    }
+
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .bar-name {
+      font-size: 0.75rem;
+      color: #9ca3c8;
+      width: 120px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .bar-track {
+      flex: 1;
+      height: 14px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 4px;
+    }
+
+    .bar-fill-endo {
+      width: 5.1%; /* 16/316 ≈ 5.1% of max */
+      background: linear-gradient(90deg, #f43f5e, #fb7185);
+    }
+
+    .bar-fill-prostate {
+      width: 96%;
+      background: linear-gradient(90deg, #7c3aed, #a78bfa);
+    }
+
+    .bar-value {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #d1d5f0;
+      width: 46px;
+      flex-shrink: 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .sources {
+      font-size: 0.68rem;
+      color: #4b5280;
+      letter-spacing: 0.01em;
+      line-height: 1.6;
+    }
+
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #7c3aed;
+      background: rgba(124,58,237,0.1);
+      border: 1px solid rgba(124,58,237,0.3);
+      border-radius: 20px;
+      padding: 6px 14px;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="title">EndoScope</div>
+      <div class="divider"></div>
+      <div class="subtitle">An AI Scientist Surfacing Research Gaps in Endometriosis</div>
+    </div>
+
+    <!-- Columns -->
+    <div class="columns">
+
+      <!-- Left: The Problem -->
+      <div class="card">
+        <div class="card-title">The Problem</div>
+        <ul class="items">
+          <li>
+            <span class="bullet"></span>
+            <span><span class="stat">190 million women</span> affected by endometriosis worldwide</span>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <span><span class="stat">7–12 year</span> average delay before diagnosis</span>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <span><span class="stat">$16M</span> in NIH funding for endometriosis vs. <span class="stat">$300M+</span> for prostate cancer, both affecting ~10% of their populations</span>
+          </li>
+          <li style="display:block; padding-left: 0;">
+            <div class="chart-block">
+              <div class="chart-label">Annual NIH Funding</div>
+              <div class="bar-row">
+                <div class="bar-name">Endometriosis</div>
+                <div class="bar-track"><div class="bar-fill bar-fill-endo"></div></div>
+                <div class="bar-value">$16M</div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-name">Prostate Cancer</div>
+                <div class="bar-track"><div class="bar-fill bar-fill-prostate"></div></div>
+                <div class="bar-value">$300M+</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <span>Women make up <span class="stat">50%</span> of the population but receive only <span class="stat">5%</span> of global R&amp;D funding</span>
+          </li>
+          <li>
+            <span class="bullet"></span>
+            <span>Only <span class="stat">1 in 5</span> NIH grant applications succeed — especially hard for PIs in underfunded fields</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: What EndoScope Does -->
+      <div class="card">
+        <div class="card-title">What EndoScope Does</div>
+        <ul class="items">
+          <li>
+            <span class="bullet-check">✦</span>
+            <span>Surveys real PubMed literature automatically</span>
+          </li>
+          <li>
+            <span class="bullet-check">✦</span>
+            <span>Identifies the most urgent research gaps</span>
+          </li>
+          <li>
+            <span class="bullet-check">✦</span>
+            <span>Generates rigorous experiment proposals with full budget breakdowns</span>
+          </li>
+          <li>
+            <span class="bullet-check">✦</span>
+            <span>Matches proposals to verified funding sources</span>
+          </li>
+          <li>
+            <span class="bullet-check">✦</span>
+            <span>Verifies all citations against PubMed in real time</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="sources">
+        Sources: WHO 2023 · Nature Reviews Bioengineering 2024 · NIH Reporter · NCI · RAND 2022
+      </div>
+      <div class="badge">Built at Bio × AI Hackathon @ YC HQ</div>
+    </div>
+
+  </div>
+</body>
+</html>
